@@ -93,7 +93,17 @@ h2, h3 {
 }
 .nav-li {
     border: 2px solid red;
-    border-radius: 25px;
+    border-radius: 25px;   
+  }
+  .patriotism {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+  } 
+  .click {
+    display: block;
+    text-align: center;
+    margin-top: 75px;
   }
   /* responsive web design */
   @media screen and (min-width: 120px) and (max-width: 1080px) {
