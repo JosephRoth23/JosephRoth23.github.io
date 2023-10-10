@@ -3,9 +3,17 @@ body {
 }
 
 canvas {
-  background-color: lightgray;
+  background-color: rgb(135 , 206, 235);
 }
 
 img {
   display: none;
+}
+
+.uptop {
+  font-family: Arial;
+}
+
+em {
+  color: red;
 }
