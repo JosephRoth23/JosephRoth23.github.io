@@ -92,9 +92,9 @@ let animationDetails = {};
 
 var collectableList = {
   database: { image: "images/collectables/database.png" },
-  diamond: { image: "images/collectables/diamond-head.png" },
+  diamond: { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpoN809GqCVwIvpoDeVlNjva3DXXDxIlgi6qQkrPGgJIW2_Zm1qDaFdZ7G-2sGHIRk4tw:https://www.iconarchive.com/download/i31624/sykonist/peter-griffin/Peter-Griffin-Football-head.ico&usqp=CAU" },
   grace: { image: "images/collectables/grace-head.png" },
   kennedi: { image: "images/collectables/kennedi-head.png" },
   max: { image: "images/collectables/max-head.png" },
-  steve: { image: "images/collectables/steve-head.png" },
+  steve: { image: "https://manzdev.github.io/cursos-assets/css3/quagmire-head.png" },
 };
