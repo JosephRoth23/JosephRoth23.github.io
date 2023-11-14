@@ -126,7 +126,14 @@ h2, h3 {
   }
   .lucky {
     text-align: center;
-    color: green;
+    color: blue;
+  }
+  .shamegif {
+    display: block;
+    margin: 0 auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    justify-content: center;
   }
   .noclicktitle {
   text-align: center;
