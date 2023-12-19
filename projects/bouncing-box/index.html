@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Bouncing Box (WIP!!!)</title>
-	<h1>This game is NOT complete and I still need to add to it.</h1>
+	<h1>This game is <em>NOT 100% complete</em> and I still need to add to it. Anyways, how many clicks can YOU get?</h1>
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
@@ -15,11 +15,18 @@
 			user-select: none;
 			display: block;
 			position: absolute;
-			top: 100px;
+			top: 250px;
 			left: 0px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
+		}
+		body {
+			background-image: url("img/customBG.png")
+		}
+		h1 {
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -71,6 +78,10 @@
 			var rgb2 = Math.random() * 10;
 			var rgb3 = Math.random() * 10;
 			var colorStr = rgb(rgb1, rgb2, rgb3)
+			var positionY = positionY + 10
+			moveBoxTo(positionY)
+            var speedY;
+			var boardHeight = jQuery(window).height();
 
 			
 			/* 
@@ -81,12 +92,17 @@
 			function update() {
 				//To increase positionX by 10
 				positionX = positionX + speed
+				positionY = positionY + speedY
 				moveBoxTo(positionX);
 				if (positionX > boardWidth){
 					speed = -speed
 				}
 				if (positionX < 0){
 					speed = -speed
+				}
+				moveBoxTo(positionY);
+				if (positionY > boardHeight){
+					speedY = -speedY
 				}
 			};
 
@@ -109,6 +125,11 @@
 				}
 				box.css('background-color', colorStr);
 			};
+			function moveBoxTo(newPositionX, newPositionY) {
+                box.css('left', newPositionX);
+                box.css('top', newPositionY);
+            }
+            moveBoxTo(positionX, positionY);
 		})();
 	</script>
 </body>
