@@ -3,13 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Bouncing Box (WIP!!!)</title>
-	<h1>This game is <em>NOT 100% complete</em> and I still need to add to it. Anyways, how many clicks can YOU get?</h1>
+	<h1>How many clicks can YOU get?</h1>
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
-			height: 70px;
-			background-color: teal;
+			width: 75px;
+			height: 75px;
+			background-color: rgb(0, 175, 0);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -104,6 +104,9 @@
 				if (positionY > boardHeight){
 					speedY = -speedY
 				}
+				if (positionY < 0){
+					speedY = -speedY
+				}
 			};
 
 			/* 
@@ -115,13 +118,13 @@
 				positionX = 0
 				points = points + 1
 				changeBoxText(points);
-				speed = speed + 3
+				speed = speed + 2
 
 				if (speed > 0){
-					speed + 3
+					speed + 2
 				}
 				else if (speed < 0){
-					speed - 3
+					speed - 2
 				}
 				box.css('background-color', colorStr);
 			};
