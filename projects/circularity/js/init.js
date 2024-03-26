@@ -73,7 +73,7 @@ circles.push(circle);
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
             }
-
+     
             // if the circle has gone past the TOP side of the screen then place it on the BOTTOM
             if ( circle.y > canvas.length ) {
                 circle.y = 0;
