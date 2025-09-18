@@ -140,6 +140,8 @@ h2, h3 {
   font-size: 48px;
   color: red;
   }
+
+
   /* responsive web design */
   @media screen and (min-width: 120px) and (max-width: 1080px) {
     main {
