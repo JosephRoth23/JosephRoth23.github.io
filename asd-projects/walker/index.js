@@ -50,9 +50,16 @@ function runProgram(){
 });
  $('#walker').css("background-color", randomColor)
   }
+   function changeColor2(){
+  var randomColor = "#000000".replace(/0/g, function () {
+  return (~~(Math.random() * 16)).toString(16);
+});
+ $('#walker2').css("background-color", randomColor)
+  }
   $(document).on('keydown', handleKeyDown);                          
   $(document).on('keyup', handleKeyUp); 
   $('#walker').on('click', changeColor)
+  $('#walker2').on('click', changeColor2)
 
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
