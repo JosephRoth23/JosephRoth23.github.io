@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Joe Mama's Fire Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <marquee scrollamount="10"><b>BREAKING</b> <s>NEWS</s> <b>BAD:</b> <em>waltuh</em></marquee>    <body>
+      <div id="all-contents">
+        <nav>
+            <h1>Joe Mama's Fire Website</h1>
+            <ul id="nav-ul">
+               <li class="nav-li">
+               <a class="nav-a" href="index.html">Home</a>
+             </li>
+             <li class="nav-li">
+               <a class="nav-a" href="portfolio.html">Portfolio</a>
+             </li>
+             <li class="nav-li">
+               <a class="nav-a" href="gallery.html">Gallery</a>
+             </li>
+             <li class="nav-li">
+              <a href="AEUGHHH.html"> AEUGHHH??? </a>
+            </li>
+            <li class="nav-li">
+              <a class="nav-a" href="donotclickthis.html"><strong><em>DO NOT CLICK</em></strong></a>
+            </li>
+         </ul>
+     </nav>
+     <main>
+        <style>
+          /* Gallery-specific styles */
+          #gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            max-width: 900px;
+            margin: 24px auto;
+            padding: 0 12px;
+          }
+          .thumb {
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            background: #f6f6f6;
+          }
+          .thumb img {
+            display: block;
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            transition: transform .25s ease;
+          }
+          .thumb:hover img { transform: scale(1.06); }
+
+          /* Lightbox */
+          .lightbox {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 9999;
+            padding: 20px;
+          }
+          .lightbox.open { display: flex; }
+          .lightbox-content {
+            max-width: 95%;
+            max-height: 95%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .lightbox img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 6px;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+          }
+          .lb-close, .lb-prev, .lb-next {
+            position: absolute;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            backdrop-filter: blur(2px);
+          }
+          .lb-close { top: 12px; right: 12px; }
+          .lb-prev { left: 12px; transform: translateY(-50%); top: 50%; }
+          .lb-next { right: 12px; transform: translateY(-50%); top: 50%; }
+          .lb-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 12px;
+            right: 12px;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+          }
+
+          @media (min-width: 800px) {
+            .thumb img { height: 140px; }
+          }
+        </style>
+    </head>
+    <body>
+       <section>
+         <h2 style="text-align:center; margin-top: 12px;">Photo Gallery</h2>
+
+         <div id="gallery" aria-label="Photo gallery">
+           <!-- Ten thumbnails. Clicking opens full-size image in lightbox.
+                Using picsum.photos as placeholder images. -->
+           <div class="thumb" data-index="0" data-full="Black.JPG" data-caption="Black">
+             <img src="Black.JPG" alt="Black">
+           </div>
+           <div class="thumb" data-index="1" data-full="Blue.JPG" data-caption="Blue">
+             <img src="Blue.JPG" alt="Blue">
+           </div>
+           <div class="thumb" data-index="2" data-full="Green.JPG" data-caption="Green">
+             <img src="Green.JPG" alt="Green">
+           </div>
+           <div class="thumb" data-index="3" data-full="Orange.JPG" data-caption="Orange">
+             <img src="Orange.JPG" alt="Orange">
+           </div>
+           <div class="thumb" data-index="4" data-full="Pink.JPG" data-caption="Pink">
+             <img src="Pink.JPG" alt="Pink">
+           </div>
+           <div class="thumb" data-index="5" data-full="Purple.JPG" data-caption="Purple">
+             <img src="Purple.JPG" alt="Purple">
+           </div>
+           <div class="thumb" data-index="6" data-full="Rainbow.JPG" data-caption="Rainbow">
+             <img src="Rainbow.JPG" alt="Rainbow">
+           </div>
+           <div class="thumb" data-index="7" data-full="Red.JPG" data-caption="Red">
+             <img src="Red.JPG" alt="Red">
+           </div>
+           <div class="thumb" data-index="8" data-full="White.JPG" data-caption="White">
+             <img src="White.JPG" alt="White">
+           </div>
+           <div class="thumb" data-index="9" data-full="Yellow.JPG" data-caption="Yellow">
+             <img src="Yellow.JPG" alt="Yellow">
+           </div>
+         </div>
+       </section>
+
+       <!-- Lightbox -->
+       <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+         <div class="lightbox-content" id="lb-content">
+           <button class="lb-close" id="lb-close" aria-label="Close (Esc)">✕</button>
+           <button class="lb-prev" id="lb-prev" aria-label="Previous (Left)">‹</button>
+           <img id="lb-image" alt="">
+           <button class="lb-next" id="lb-next" aria-label="Next (Right)">›</button>
+           <div class="lb-caption" id="lb-caption"></div>
+         </div>
+       </div>
+     </main>
+    </div>
+
+    <script>
+      // Simple lightbox for the gallery
+      (function () {
+        const thumbs = Array.from(document.querySelectorAll('#gallery .thumb'));
+        const lightbox = document.getElementById('lightbox');
+        const lbImage = document.getElementById('lb-image');
+        const lbCaption = document.getElementById('lb-caption');
+        const closeBtn = document.getElementById('lb-close');
+        const prevBtn = document.getElementById('lb-prev');
+        const nextBtn = document.getElementById('lb-next');
+
+        let current = 0;
+        const images = thumbs.map(t => ({
+          full: t.dataset.full,
+          caption: t.dataset.caption || '',
+        }));
+
+        function open(index) {
+          current = (index + images.length) % images.length;
+          lbImage.src = images[current].full;
+          lbImage.alt = images[current].caption || ('Image ' + (current + 1));
+          lbCaption.textContent = images[current].caption || '';
+          lightbox.classList.add('open');
+          lightbox.setAttribute('aria-hidden', 'false');
+        }
+
+        function close() {
+          lightbox.classList.remove('open');
+          lightbox.setAttribute('aria-hidden', 'true');
+          lbImage.src = '';
+        }
+
+        function showNext() { open(current + 1); }
+        function showPrev() { open(current - 1); }
+
+        thumbs.forEach((t, i) => {
+          t.addEventListener('click', () => open(i));
+          t.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+          });
+          t.setAttribute('tabindex', '0');
+        });
+
+        closeBtn.addEventListener('click', close);
+        prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+        nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+
+        // Close when clicking backdrop
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) close();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (!lightbox.classList.contains('open')) return;
+          if (e.key === 'Escape') close();
+          if (e.key === 'ArrowRight') showNext();
+          if (e.key === 'ArrowLeft') showPrev();
+        });
+      })();
+    </script>
+<marquee direction="right" scrollamount="50"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbRyNoSHoBjD9l1K2KjMyn1V9kkTOhHihL7BR1AhDZ9w&s"></marquee>
+</body>
+</html>
+     </main>
