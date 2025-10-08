@@ -1,0 +1,11 @@
+#DxHeading {
+    text-align: center;
+    font-size: 36px;
+}
+html {
+    background-color: blue;
+}
+p {
+    font-size: 18px;
+    color: white
+}

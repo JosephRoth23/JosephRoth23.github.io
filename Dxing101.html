@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM DXing 101</title>
+    <link rel="stylesheet" href="DXingStyle.css">
+</head>
+<body>
+<div id="DxHeading">
+<h1 style="font-family: Arial, sans-serif; color: lightblue">Welcome to <em style="color: yellow;">FM DXing 101</em></h1>
+</div>
+<p style="font-family: Arial, sans-serif;">What if I told you there was a way to listen to FM radio stations from hundreds and even over a THOUSAND miles away? It may sound fake, but it is very much possible, and I'm going to teach you how to do it.</p>
+<p style="font-family: Arial, sans-serif;"><em><b>NOTE:</b></em> This is only (technically) possible between May-August and for a short time near the winter solstice (late December)</p>
+<h2 style="font-family: Arial, sans-serif; color: yellow;">SECTION 1: Equipment</h2>
+<p style="font-family: Arial, sans-serif;">Before you can log distant FM stations, you need to be able to hear them. Therefore, you need the proper equipment. All you need to FM DX is: A sensitive radio tuner with good selectivity (picks up weak signals well at only the frequency you're tuned to) and an outdoor (preferably) antenna to receive the distant signals.</p>
+<h2 style="font-family: Arial, sans-serif; color: yellow;">SECTION 2: Determining Best Conditions</h2>
+<p style="font-family: Arial, sans-serif;">Now that you have your equipment ready, you can begin to log distant FM stations. However, when you turn on your radio and tune to an open frequency, there is only static. Why is this? Well, it might just not be the right conditions. See, listening to FM stations from 1,000+ miles away unfortunately isn't magic, but rather science. Through a phenomenon known as "sporadic E propagation" or "E-skip", FM signals are able to bounce off the ionosphere, traveling way further than their regular signal range. This occurs whenever large ionisation clouds build up in the lower part of the E region of the ionosphere. If these clouds aren't there, E-skip cannot happen. However, you cannot predict when E-skip will happen, as it is sporadic. But, if you tune to an open frequency during the late morning or early evening (these are the best times for E-skip) in the summer, you will likely receive a distant station thanks to E-skip. I have gotten a distant station one time via E-skip, and that station is WTOP out of Washington, D.C. on July 31, 2025. The distance between their transmitter and my antenna is a whopping <b>938.55 miles</b>!!!</p>
+<p style="font-family: Arial, sans-serif;"><em><b>ANOTHER NOTE:</b></em> I kinda lied, E-skip can actually happen anytime as it is sporadic. However, it really only happens during the aforementioned times.</p>
+<h2 style="font-family: Arial, sans-serif; color: yellow;">SECTION 3: An alternate (but less extreme) way to FM DX</h2>
+<p style="font-family: Arial, sans-serif;">There is actually another way to FM DX that is more reliable and common than E-skip. However, it doesn't allow you to listen to stations from as far away as E-skip allows, as receptions over 1,000 miles are very rare. This method of FM DXing is possible through another phenomenon called "tropospheric propagation". Tropospheric propagation is a form of propagation that occurs in—you guessed it—the troposphere. This type of propagation occurs when the weather allows radio signals to be scattered, reflected, or refracted. When this happens, radio signals can travel hundreds of miles beyond their regular range. I have received many stations between 50-150 miles away thanks to this kind of propagation.</p>
+<p style="font-family: Arial, sans-serif; text-align: center">Here are some photos of call letters of distant stations I have received via tropo:</p>
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="Tropo Photos/WXRR.JPEG" alt="WXRR Hattiesburg, MS - 83.83 miles" onclick="openModal(this)">
+        <div class="caption">WXRR Hattiesburg, MS - 83.83 miles</div>
+    </div>
+    <div class="gallery-item">
+        <img src="Tropo Photos/KSMB.JPEG" alt="KSMB Lafayette, LA - 124.8 miles" onclick="openModal(this)">
+        <div class="caption">KSMB Lafayette, LA - 124.8 miles</div>
+    </div>
+    <div class="gallery-item">
+        <img src="Tropo Photos/WOSM.JPEG" alt="WOSM Ocean Springs, MS - 85.94 miles" onclick="openModal(this)">
+        <div class="caption">WOSM Ocean Springs, MS - 85.94 miles</div>
+    </div>
+    <div class="gallery-item">
+        <img src="Tropo Photos/WABD.JPEG" alt="WABD Mobile, AL - 137.62 miles" onclick="openModal(this)">
+        <div class="caption">WABD Mobile, AL - 137.62 miles</div>
+    </div>
+    <div class="gallery-item">
+        <img src="Tropo Photos/WQNZ.JPEG" alt="WQNZ Natchez, MS - 99.64 miles" onclick="openModal(this)">
+        <div class="caption">WQNZ Natchez, MS - 99.64 miles</div>
+    </div>
+     <div class="gallery-item">
+        <img src="Tropo Photos/WBUV.JPEG" alt="WBUV Moss Point, MS - 84.93 miles" onclick="openModal(this)">
+        <div class="caption">WBUV Moss Point, MS - 84.93 miles</div>
+    </div>
+    <div class="gallery-item">
+        <img src="Tropo Photos/KTDY.JPEG" alt="KTDY Lafayette, LA (distance unavailable, roughly same as KSMB)" onclick="openModal(this)">
+        <div class="caption">KTDY Lafayette, LA (distance unavailable, roughly same as KSMB)</div>
+    </div>
+    <div class="gallery-item">
+        <img src="Tropo Photos/WAZA.JPEG" alt="WAZA Liberty, MS - 63.8 miles" onclick="openModal(this)">
+        <div class="caption">WAZA Liberty, MS - 63.8 miles</div>
+    </div>
+    <div class="gallery-item">
+        <img src="Tropo Photos/KQID.JPEG" alt="KQID Alexandria, LA - 143.36 miles" onclick="openModal(this)">
+        <div class="caption">KQID Alexandria, LA - 143.36 miles</div>
+    </div>
+    <!-- Add more photos as needed -->
+</div>
+
+<!-- Modal for full-size image -->
+<div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="modal-caption"></div>
+</div>
+
+<script>
+function openModal(img) {
+    document.getElementById('modal').style.display = "block";
+    document.getElementById('modal-img').src = img.src;
+    document.getElementById('modal-caption').innerText = img.alt;
+}
+function closeModal() {
+    document.getElementById('modal').style.display = "none";
+}
+</script>
+
+<style>
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+.gallery-item {
+    text-align: center;
+}
+.gallery-item img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.2s;
+}
+.gallery-item img:hover {
+    border-color: #00f;
+}
+.caption {
+    margin-top: 8px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: #222;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.95em;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    text-align: center;
+}
+.modal-content {
+    margin: 40px auto;
+    display: block;
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 8px;
+}
+.close {
+    position: absolute;
+    top: 20px; right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#modal-caption {
+    margin: 16px auto;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+}
+</style>
+</html>
